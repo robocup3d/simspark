@@ -185,7 +185,8 @@ Contrary to 2D soccer simulation, the vision system does not deliver
 object velocities. Objects can be occluded by other objects (this is
 not completely implemented yet). All distances and angles are given
 relative to the camera position. The camera is currently located at
-the center of the robot's torso.
+the center of the robot's torso. That means that the observed information of
+visible objects changes if the robot is moving or turning.
 
 % Klaus: where is it in humanoid league
 % Joschka: in the head for most of them, although some robots have an additional camera on the torso pointing down to be able to see the ball if it's right in front of their feet.
@@ -344,9 +345,11 @@ the SoccerInitEffector is used.
 \label{sec:HJE}
 
 Effector for all axis with a single degree of freedom.
-The first parameter is the name of the axis. Table ??? shows a list of all
-available hinge joints. The second parameter contains the change in angle of
-the joint.
+The first parameter is the name of the axis. Table \ref{table:perceptorNames}
+shows a list of all available hinge joints of the Soccerbot robot. Table
+\ref{tab:nao-conf} those of the NAO robot. The second parameter contains
+the speed of change in angle of the joint. So a value of 3 means 3 degrees per cycle.
+%Klaus: is that true? degree per cycle?
 \begin{itemize}
 	\item[Message format:] \texttt{(<name> <ax>)}
 	\item[Example message:] \texttt{(lae3 5.3)}
@@ -356,10 +359,10 @@ the joint.
 \label{sec:UJE}
 
 Effector for all axis with a two degrees of freedom.
-The first parameter is the name of the axis. Table ??? shows a list of all
-available hinge joints
-The second and third parameter contain the change in angle of the two joints.
-The order of the joints is the same as in the name.
+The first parameter is the name of the axis. Table \ref{table:perceptorNames} shows a list of all
+available universal joints of the Socerbot robot. The NAO robot does not have
+universal joints. The second and third parameter contain the speed of change in
+angle of the two joints. The order of the joints is the same as in the name.
 \begin{itemize}
 	\item[Message format:] \texttt{(<name> <ax1> <ax2>)}
 	\item[Example message:] \texttt{(lae1\_2 -2.3 1.2)}
@@ -393,8 +396,8 @@ first.
 
 The beam effector allows a player to position itself on the field before the
 game starts. The x and y coordinates define the position on the field with
-respect to the coordinate system of figure ???. The rot value allows to define
-the rotation angle of the player. Zero degrees points to positive x axis, 90
+respect to the coordinate system of figure \ref{fig:pitch}. The rot value allows
+to define the rotation angle of the player. Zero degrees points to positive x axis, 90
 degrees to positive y axis.
 \begin{itemize}
 	\item[Message format:] \texttt{(beam <x> <y> <rot>)}

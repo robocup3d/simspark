@@ -46,7 +46,7 @@ This soccer simulation is also used as the official competition environment for 
   \label{fig:soccersim}
 \end{figure}
 
-\subsection{Environment and Objects on the Field}
+\subsection{Field for Soccerbot}
 
 The dimensions of the soccer field are 50 by 32 meters. The center
 spot has a radius of 4.5 meters. Each goal is 9 by 2 meter with a
@@ -68,6 +68,22 @@ distinguish flags through their code name as shown in figure
   \includegraphics[width=\textwidth]{fig/pitch}
   \caption{The dimensions of the soccer pitch and the object markers on the field as perceived by an agent}
   \label{fig:pitch}
+\end{figure}
+
+\subsection{Field for Nao}
+
+The dimensions of the Nao field is smaller than for Soccerbot. It has a length
+of 12 and width of 8 meters. Landmarks' names and positions can be seen in
+figure \ref{fig:pitchNao}. More detailed information on parameters for the Nao
+environment can be found in the configuration file \texttt{naosoccersim.rb}
+%The soccer ball has a radius of 0.4 meter and a mass of 430 gram.
+
+
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=\textwidth]{fig/pitchNao}
+  \caption{The dimensions of the soccer pitch for the Nao agent}
+  \label{fig:pitchNao}
 \end{figure}
 
 \subsection{Rules Judged by the Automatic Referee}
