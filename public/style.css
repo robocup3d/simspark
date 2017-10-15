@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #444;
+}
+
+hr {
+  clear: both;
+  border: 0;
+  height: 1px;
+  background: #e8e8e8;
+}
+
+#top {
+  height: 4px;
+  background: #280;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h2 {
+  margin-top: 15px;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+a,
+a:visited,
+a:active {
+  color: #280;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #482;
+  color: #6a4;
+  text-decoration: underline;
+}
+
+ul {
+  padding: 10px;
+  list-style: none;
+  margin-left: 20px;
+}
+
+ul li {
+  padding: 5px 0px;
+}
+
+ul li:hover {
+  list-style: disc;
+}
+
+p {
+  padding: 5px 0px;
+}
+
+.img-container {
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.img-border {
+  margin: 10px;
+  padding: 3px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 12px 2px #ddd;
+}
+
+.img-border span {
+  display: block;
+  font-size: 10px;
+}
+
+.content {
+  margin: auto;
+  max-width: 876px;
+  padding: 5px 20px;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.title {
+  color: #555;
+}
+
+img.title {
+  float: left;
+}
+
+.title h1 {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 26px;
+  padding: 8px 0px;
+}
+
+.title a {
+  color: #555;
+  text-decoration: none;
+}
+
+#gitlab-link {
+  display: inline-block;
+  font-size: 16px;
+  padding: 13px 8px;
+  float: right;
+}
+
+a#gitlab-link:hover {
+  color: #6a4;
+}
+
+.navbar {
+
+}
+
+.navbar a:first-child,
+.navbar span:first-child {
+  margin-left: 0px;
+}
+
+.navbar a,
+.navbar span {
+  display: inline-block;
+  text-decoration: none;
+  margin: 2px 8px;
+}
+
+.teaser {
+  text-align: center;
+  font-size: 18px;
+}
+
+.publication {
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+table.release {
+  text-align: center;
+  margin: 10px auto;
+  width: 90%;
+}
+
+table.release tr.entry:hover {
+  background: #f8f8f8;
+}
+
+table.release th {
+  font-weight: normal;
+  text-align: left;
+  padding: 3px;
+  padding-top: 8px;
+  font-size: 12px;
+}
+
+table.release td.version {
+  width: 12%;
+}
+
+table.release td.date {
+  width: 20%;
+  font-size: 12px;
+}
+
+table.release td.single {
+  width: 68%;
+}
+
+table.release td.patches {
+  font-size: 12px;
+}
+
+table.release td {
+  width: 17%;
+  padding: 3px;
+}
+
+.bottom-links {
+  text-align: center;
+}
+
+.bottom-links a {
+  font-size: 14px;
+  padding: 4px;
+}
