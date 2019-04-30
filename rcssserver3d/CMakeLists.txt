@@ -76,6 +76,9 @@ set(RPATH_DIRECTORIES ${SPARK_LIB_DIR}
    "${CMAKE_INSTALL_PREFIX}/${LIBDIR}/${CMAKE_PROJECT_NAME}")
 set(CMAKE_SHARED_MODULE_PREFIX "")
 
+# Disable new dtags in linker as we rely on RPATH (fixes transitive library referencing issues on systems using --enable-new-dtags by default)
+SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--disable-new-dtags")
+
 mark_as_advanced(BINDIR LIBDIR DATADIR INCLUDEDIR)
 
 set(GUI_DATA_DIR ${DATADIR}/carbon)
