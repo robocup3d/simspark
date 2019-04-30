@@ -97,6 +97,7 @@ if (NOT APPLE)
    set_target_properties(soccercontrolframe PROPERTIES VERSION 1.0.0 SOVERSION 1)
 endif (NOT APPLE)
 
+set_target_properties(soccercontrolframe PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS soccercontrolframe DESTINATION ${guipluginlibdir})
 
 ########### install files ###############

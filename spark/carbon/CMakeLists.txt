@@ -302,6 +302,8 @@ add_definitions(-D_SCL_SECURE_NO_WARNINGS)
 	
 set_target_properties(carbon PROPERTIES VERSION ${CARBON_VERSION}
     SOVERSION ${CARBON_SO_VERSION} DEBUG_POSTFIX _debug)
+
+set_target_properties(carbon PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS carbon DESTINATION ${LIBDIR}/${CMAKE_PROJECT_NAME})
 
 #configure_file(${CMAKE_CURRENT_SOURCE_DIR}/carbon-config.in ${CMAKE_CURRENT_BINARY_DIR}/carbon-config)

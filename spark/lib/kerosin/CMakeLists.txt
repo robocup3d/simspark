@@ -127,6 +127,7 @@ target_link_libraries(kerosin ${FREETYPE_LIBRARIES} ${IL_LIBRARIES}
 
 set_target_properties(kerosin PROPERTIES VERSION ${KEROSIN_VERSION}
     SOVERSION ${KEROSIN_SO_VERSION} DEBUG_POSTFIX _debug)
+set_target_properties(kerosin PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS kerosin DESTINATION ${LIBDIR}/${CMAKE_PROJECT_NAME})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/kerosin-config.in

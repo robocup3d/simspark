@@ -14,6 +14,7 @@ target_link_libraries(spark salt zeitgeist oxygen kerosin)
 
 set_target_properties(spark PROPERTIES VERSION ${SPARK_VERSION}
     SOVERSION ${SPARK_SO_VERSION} DEBUG_POSTFIX _debug)
+set_target_properties(spark PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS spark DESTINATION ${LIBDIR}/${CMAKE_PROJECT_NAME})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/spark-config.in

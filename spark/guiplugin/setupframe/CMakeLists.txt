@@ -62,6 +62,7 @@ if (NOT APPLE)
    set_target_properties(setupframe PROPERTIES VERSION 1.0.0 SOVERSION 1)
 endif (NOT APPLE)
 
+set_target_properties(setupframe PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS setupframe DESTINATION ${CARBON_PLUGIN_LIB_DIR})
 
 ########### install files ###############

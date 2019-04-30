@@ -63,6 +63,7 @@ target_link_libraries(zeitgeist ${RUBY_LIBRARY} ${zeitgeist_require_libs})
 
 set_target_properties(zeitgeist PROPERTIES VERSION ${ZEITGEIST_VERSION}
     SOVERSION ${ZEITGEIST_SO_VERSION} DEBUG_POSTFIX _debug)
+set_target_properties(zeitgeist PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS zeitgeist DESTINATION ${LIBDIR}/${CMAKE_PROJECT_NAME})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/zeitgeist-config.in

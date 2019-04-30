@@ -61,6 +61,7 @@ if (NOT APPLE)
    set_target_properties(guisimplelayout PROPERTIES VERSION 1.0.0 SOVERSION 1)
 endif (NOT APPLE)
 
+set_target_properties(guisimplelayout PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS guisimplelayout DESTINATION ${CARBON_LAYOUT_LIB_DIR})
 
 ########### install files ###############

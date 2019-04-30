@@ -17,4 +17,5 @@ if (NOT APPLE)
    set_target_properties(rosimporter PROPERTIES VERSION 0.0.0 SOVERSION 0)
 endif (NOT APPLE)
 
+set_target_properties(rosimporter PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS rosimporter DESTINATION ${LIBDIR}/${CMAKE_PROJECT_NAME})

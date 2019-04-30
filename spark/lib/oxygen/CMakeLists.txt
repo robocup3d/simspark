@@ -308,6 +308,7 @@ target_link_libraries(oxygen rcssnet3D ${Boost_LIBRARIES}
 
 set_target_properties(oxygen PROPERTIES VERSION ${OXYGEN_VERSION}
     SOVERSION ${OXYGEN_SO_VERSION} DEBUG_POSTFIX _debug)
+set_target_properties(oxygen PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS oxygen DESTINATION ${LIBDIR}/${CMAKE_PROJECT_NAME})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/oxygen-config.in

@@ -120,7 +120,11 @@ set(BINDIR "bin" CACHE PATH "The directory to install binaries into.")
 set(LIBDIR "lib" CACHE PATH "The directory to install libraries into.")
 set(DATADIR "share" CACHE PATH "The directory to install data files into.")
 set(INCLUDEDIR "include" CACHE PATH "The directory to install includes into.")
+set(RPATH_DIRECTORIES "${CMAKE_INSTALL_PREFIX}/${LIBDIR}/${CMAKE_PROJECT_NAME}")
 set(CMAKE_SHARED_MODULE_PREFIX "")
+
+# Enable new dtags in linker for using new RUNPATH instead of RPATH (remember to specify INSTALL_RPATH on targets if required, as RUNPATH is not transitive!)
+SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--enable-new-dtags")
 
 set(CARBON_LAYOUT_LIB_DIR ${LIBDIR}/guilayout CACHE PATH "The directory to install carbon gui layout libraries into.")
 set(CARBON_PLUGIN_LIB_DIR ${LIBDIR}/guiplugin CACHE PATH "The directory to install carbon gui plugin libraries into.")
