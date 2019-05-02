@@ -51,13 +51,13 @@
           (load $GoalObj)
           (setScale $ObjWidth $ObjHeight $ObjDepth)
           (setTransparent)
-        )
-	  )
+         )
+     )
 
 	 ;; create the left goal post
 	 (nd Transform
 	     (setLocalPos 0 (eval -1 * (eval $GoalHalfWidth + $BarRadius)) 0)
-	     ;; (nd Box
+;;		 (nd Box
 ;; 		 (setExtents $GoalDepth $BarDiameter $GoalHeight)
 ;; 		 (setMaterial matWhite)
 ;; 		 )
@@ -69,10 +69,10 @@
 	 ;; create the right goal post
 	 (nd Transform
 	     (setLocalPos 0 (eval $GoalHalfWidth + $BarRadius)  0 )
-;;; 	     (nd Box
-;;; 		 (setExtents $GoalDepth $BarDiameter $GoalHeight)
-;;; 		 (setMaterial matWhite)
-;;; 		 )
+;; 		 (nd Box
+;; 		 (setExtents $GoalDepth $BarDiameter $GoalHeight)
+;; 		 (setMaterial matWhite)
+;; 		 )
 	     (nd BoxCollider
 		 (setBoxLengths $GoalDepth $BarDiameter $GoalHeight)
 		 )
@@ -80,12 +80,11 @@
 
 	 ;; create goal back wall
 	 (nd Transform
-	     (setLocalPos (eval -0.2 * $GoalHalfDepth) 0 0)
-	     (setLocalRotation 0 30 0)
-;;; 	     (nd Box
-;;; 		 (setExtents $BarDiameter $GoalWidth $GoalHeight)
-;;; 		 (setMaterial $material)
-;;; 		 )
+	     (setLocalPos (eval -1 * (eval $GoalHalfDepth - $BarRadius)) 0 0)
+;; 		 (nd Box
+;; 		 (setExtents $BarDiameter $GoalWidth $GoalHeight)
+;; 		 (setMaterial $material)
+;; 		 )
 	     (nd BoxCollider
 		 (setBoxLengths $BarDiameter $GoalWidth $GoalHeight)
 		 )
