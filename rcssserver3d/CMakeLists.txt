@@ -76,9 +76,6 @@ set(RPATH_DIRECTORIES ${SPARK_LIB_DIR}
    "${CMAKE_INSTALL_PREFIX}/${LIBDIR}/${CMAKE_PROJECT_NAME}")
 set(CMAKE_SHARED_MODULE_PREFIX "")
 
-# Enable new dtags in linker for using new RUNPATH instead of RPATH (remember to specify INSTALL_RPATH on targets if required, as RUNPATH is not transitive!)
-SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--enable-new-dtags")
-
 mark_as_advanced(BINDIR LIBDIR DATADIR INCLUDEDIR)
 
 set(GUI_DATA_DIR ${DATADIR}/carbon)

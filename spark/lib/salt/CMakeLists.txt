@@ -35,6 +35,7 @@ target_link_libraries(salt libobject ${salt_require_libs})
 
 set_target_properties(salt PROPERTIES VERSION ${SALT_VERSION}
     SOVERSION ${SALT_SO_VERSION} DEBUG_POSTFIX _debug)
+set_target_properties(salt PROPERTIES INSTALL_RPATH "${RPATH_DIRECTORIES}")
 install(TARGETS salt DESTINATION ${LIBDIR}/${CMAKE_PROJECT_NAME})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/salt-config.in
