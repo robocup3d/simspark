@@ -27,6 +27,7 @@
 #include <boost/shared_ptr.hpp>
 #endif
 #include <oxygen/oxygen_defines.h>
+#include <salt/vector.h>
 
 namespace oxygen
 {

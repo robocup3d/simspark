@@ -25,6 +25,7 @@
 
 #include <oxygen/oxygen_defines.h>
 #include <oxygen/sceneserver/basenode.h>
+#include <salt/matrix.h>
 
 namespace oxygen
 {

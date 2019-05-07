@@ -25,6 +25,8 @@
 
 #include <oxygen/oxygen_defines.h>
 #include <oxygen/physicsserver/genericphysicsobjects.h>
+#include <salt/vector.h>
+#include <salt/matrix.h>
 
 namespace oxygen
 {
