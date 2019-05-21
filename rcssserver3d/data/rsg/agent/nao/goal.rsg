@@ -2,7 +2,7 @@
 
 (RSG 0 1)
 (
- (templ $name $x $y $theta
+ (templ $name $objName $x $y $theta
 	$LeftFlagName $RightFlagName
 	$material)
 
@@ -24,7 +24,7 @@
  (def $BarDiameter     0.04)
  (def $BarRadius       (eval $BarDiameter / 2.0))
 
- (def $GoalObj (join models/ $name .obj))
+ (def $GoalObj (join models/ $objName .obj))
  (def $ObjWidth (eval $GoalWidth + (eval $BarDiameter * 2.0)))
  (def $ObjHeight (eval $GoalHeight + (eval $BarDiameter * 2.0)))
  (def $ObjDepth (eval $GoalDepth + (eval $BarDiameter * 2.0)))
