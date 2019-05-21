@@ -90,6 +90,18 @@
 		 )
 	     )	 
 
+	 ;; create goal top plate
+	 (nd Transform
+	     (setLocalPos 0 0 (eval $GoalHalfHeight + $BarRadius))
+;; 		 (nd Box
+;; 		 (setExtents $GoalDepth (eval $GoalWidth + (eval $BarDiameter * 2.0)) $BarDiameter)
+;; 		 (setMaterial $material)
+;; 		 )
+	     (nd BoxCollider
+		 (setBoxLengths $GoalDepth (eval $GoalWidth + (eval $BarDiameter * 2.0)) $BarDiameter)
+		 )
+	     )
+
 	 ;; mark the goal (no visualization)
 	 (importScene rsg/agent/flag_no_viz.rsg
 		      (eval $GoalHalfDepth )
